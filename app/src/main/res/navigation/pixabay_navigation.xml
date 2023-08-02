@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pixabay_navigation.xml"
+    app:startDestination="@id/imagesListFragment">
+    <fragment
+        android:id="@+id/imagesListFragment"
+        android:name="com.pixabay.viewer.screens.imageslist.ImagesListFragment"
+        android:label="@string/pixabay_viewer">
+        <action
+            android:id="@+id/action_imagesListFragment_to_questionDetailsDialogFragment"
+            app:destination="@id/questionDetailsDialogFragment" />
+        <action
+            android:id="@+id/action_imagesListFragment_to_serverErrorDialogFragment"
+            app:destination="@id/serverErrorDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/questionDetailsDialogFragment"
+        android:name="com.pixabay.viewer.dialogs.QuestionDetailsDialogFragment"
+        android:label="@string/question_details_dialog_title">
+        <action
+            android:id="@+id/action_questionDetailsDialogFragment_to_imageDetailsFragment"
+            app:destination="@id/imageDetailsFragment" />
+        <argument
+            android:name="hit"
+            app:argType="com.pixabay.viewer.models.Hit"
+            app:nullable="false" />
+    </dialog>
+    <fragment
+        android:id="@+id/imageDetailsFragment"
+        android:name="com.pixabay.viewer.screens.imagedetails.ImageDetailsFragment"
+        android:label="@string/image_details"
+        tools:layout="@layout/fragment_image_details">
+        <argument
+            android:name="hit"
+            app:argType="com.pixabay.viewer.models.Hit"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_imageDetailsFragment_to_serverErrorDialogFragment"
+            app:destination="@id/serverErrorDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/serverErrorDialogFragment"
+        android:name="com.pixabay.viewer.dialogs.ServerErrorDialogFragment"
+        android:label="ServerErrorDialogFragment" />
+</navigation>

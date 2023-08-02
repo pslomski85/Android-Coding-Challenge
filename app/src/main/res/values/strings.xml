@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Pixabay Photo Viewer</string>
+    <string name="question_details_dialog_title">Details</string>
+    <string name="question_details_dialog_message">Do you want to see more details?</string>
+
+    <string name="server_error_dialog_title">Server Error</string>
+    <string name="server_error_dialog_message">Communication with the server failed</string>
+    <string name="server_error_dialog_button_ok">OK</string>
+    <string name="question_details_dialog_positive_button_caption">Yes</string>
+    <string name="question_details_dialog_negative_button_caption">No</string>
+
+    <string name="user_name">"User name : "</string>
+    <string name="tag_list">"Tag list : "</string>
+    <string name="likes_number">"Likes number : "</string>
+    <string name="downloads_number">"Number of downloads : "</string>
+    <string name="coments_number">"Number of comments : "</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Search images</string>
+    <string name="pixabay_viewer">Pixabay Viewer</string>
+    <string name="image_details">Image details</string>
+</resources>
